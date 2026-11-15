@@ -1,0 +1,11 @@
+// Multi-file schema — design §5 (deviation D2).
+// The datasource URL lives in prisma.config.ts (Prisma 7), not here.
+generator client {
+	provider = "prisma-client"
+	output   = "../../src/generated"
+}
+
+datasource db {
+	provider = "postgresql"
+	schemas  = ["identity", "academy", "billing", "content", "media", "jobs"]
+}

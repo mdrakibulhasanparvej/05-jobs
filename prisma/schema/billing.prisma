@@ -1,0 +1,112 @@
+// ───────────── BILLING (module of 02-academy) ─────────────
+// Models verbatim from design §5. Service 02-academy owns this schema.
+
+// Enums live in enum.prisma (single enum file) — do not declare enums here.
+
+model FeePlan {
+	// "how much money" is written exactly once; a payment only carries the plan ID
+	id          String      @id @default(uuid(7)) @db.Uuid
+	kind        PaymentKind // ADMISSION_FEE | COURSE_FEE (not DONATION; CHECK)
+	name        String
+	amount      Decimal     @db.Decimal(12, 2)
+	currency    String      @default("BDT") @db.Char(3)
+	batchId     String?     @map("batch_id") @db.Uuid // ADMISSION_FEE: a specific batch; null = all batches
+	courseId    String?     @map("course_id") @db.Uuid // COURSE_FEE: mandatory (CHECK)
+	isActive    Boolean     @default(true) @map("is_active")
+	createdById String?     @map("created_by_id") @db.Uuid
+	createdAt   DateTime    @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt   DateTime    @updatedAt @map("updated_at") @db.Timestamptz
+
+	batch      Batch?    @relation(fields: [batchId], references: [id])
+	course     Course?   @relation(fields: [courseId], references: [id])
+	createdBy  User?     @relation("FeePlanCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+	payments   Payment[]
+
+	@@index([kind, isActive])
+	@@map("fee_plans")
+	@@schema("billing")
+}
+
+model Payment {
+	id               String         @id @default(uuid(7)) @db.Uuid
+	kind             PaymentKind
+	status           PaymentStatus  @default(PENDING)
+	gateway          PaymentGateway
+	method           PaymentMethod?
+	studentId        String?        @map("student_id") @db.Uuid // ADMISSION_FEE / COURSE_FEE — payer = student.user (derived)
+	userId           String?        @map("user_id") @db.Uuid // DONATION only
+	feePlanId        String?        @map("fee_plan_id") @db.Uuid // fees only; course/batch derived from here
+	amount           Decimal        @db.Decimal(12, 2) // snapshot (historical, not a duplicate)
+	currency         String         @default("BDT") @db.Char(3)
+	isAnonymous      Boolean        @default(false) @map("is_anonymous") // DONATION: hide name in public lists
+	gatewaySessionId String?        @map("gateway_session_id") // checkout session / gateway payment session
+	gatewayPaymentId String?        @map("gateway_payment_id") // gateway's final transaction id
+	receiptNo        String?        @unique @map("receipt_no") // for fees = MR number, issued by the moderator at verification (not auto); auto receipt for DONATION
+	receivedById     String?        @map("received_by_id") @db.Uuid // staff who entered the offline/manual payment
+	verifiedById     String?        @map("verified_by_id") @db.Uuid // MODERATOR/ADMIN who verified the payment and issued the MR number
+	verifiedAt       DateTime?      @map("verified_at") @db.Timestamptz
+	expiresAt        DateTime?      @map("expires_at") @db.Timestamptz
+	paidAt           DateTime?      @map("paid_at") @db.Timestamptz
+	createdAt        DateTime       @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt        DateTime       @updatedAt @map("updated_at") @db.Timestamptz
+
+	student    StudentInformation? @relation(fields: [studentId], references: [id])
+	user       User?            @relation(fields: [userId], references: [id])
+	feePlan    FeePlan?         @relation(fields: [feePlanId], references: [id])
+	receivedBy User?            @relation("PaymentReceivedBy", fields: [receivedById], references: [id], onDelete: SetNull)
+	verifiedBy User?            @relation("PaymentVerifiedBy", fields: [verifiedById], references: [id], onDelete: SetNull)
+	refunds    PaymentRefund[]
+
+	@@unique([gateway, gatewaySessionId])
+	@@unique([gateway, gatewayPaymentId])
+	@@index([studentId, status])
+	@@index([userId, status])
+	@@index([kind, status, paidAt(sort: Desc)])
+	@@map("payments")
+	@@schema("billing")
+}
+
+model PaymentRefund {
+	id             String   @id @default(uuid(7)) @db.Uuid
+	paymentId      String   @map("payment_id") @db.Uuid
+	amount         Decimal  @db.Decimal(12, 2)
+	reason         String?
+	gatewayRefundId String? @map("gateway_refund_id")
+	createdById    String?  @map("created_by_id") @db.Uuid
+	createdAt      DateTime @default(now()) @map("created_at") @db.Timestamptz
+
+	payment   Payment @relation(fields: [paymentId], references: [id], onDelete: Restrict)
+	createdBy User?   @relation("PaymentRefundCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+
+	@@index([paymentId])
+	@@map("payment_refunds")
+	@@schema("billing")
+}
+
+model GatewayCustomer {
+	// gateway customer id; name/email are NOT kept here (they live in users)
+	userId      String         @map("user_id") @db.Uuid
+	gateway     PaymentGateway
+	customerRef String         @map("customer_ref")
+	createdAt   DateTime       @default(now()) @map("created_at") @db.Timestamptz
+
+	user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+	@@id([userId, gateway])
+	@@unique([gateway, customerRef])
+	@@map("gateway_customers")
+	@@schema("billing")
+}
+
+model GatewayEvent {
+	// webhook idempotency: the same event is never processed twice
+	gateway     PaymentGateway
+	eventId     String  @map("event_id")
+	type        String
+	receivedAt  DateTime  @default(now()) @map("received_at") @db.Timestamptz
+	processedAt DateTime? @map("processed_at") @db.Timestamptz
+
+	@@id([gateway, eventId])
+	@@map("gateway_events")
+	@@schema("billing")
+}

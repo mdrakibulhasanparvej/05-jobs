@@ -1,0 +1,1710 @@
+{
+  "generatedAt": "2026-11-14T08:50:58.517Z",
+  "mode": "apply",
+  "source": {
+    "uri": "mongodb://127.0.0.1:27017/amarShikkha",
+    "designations": 80,
+    "workplaces": 154,
+    "jobholders": 240
+  },
+  "designations": {
+    "planned": [],
+    "skipped": []
+  },
+  "workplaces": {
+    "planned": [
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b8a"
+        ],
+        "name": "Ananta Garments Ltd.",
+        "address": "Nischintapur, Ashulia, DEPZ Road, Savar, Dhaka-1341",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b8f"
+        ],
+        "name": "Artistic Design Ltd.",
+        "address": "232-233, East Narshingpur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bac"
+        ],
+        "name": "Haesong Korea Ltd.",
+        "address": "Han Complex, Ground Floor, Bara Rangamatia, Zirabo, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb9"
+        ],
+        "name": "Knit Valley Fashions Ltd.",
+        "address": "Vill: Kalma, P.O.: Dairy Farm, Savar, Dhaka-1341",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b83"
+        ],
+        "name": "Al-Islam Textiles Ltd.",
+        "address": "9, Karnapara, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b8c"
+        ],
+        "name": "Anzir Apparels Ltd.",
+        "address": "Dewan Idris Road, Zirabo, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b97"
+        ],
+        "name": "Birds Garments Ltd.",
+        "address": "113, Baipail, Ashulia, Savar, Dhaka-1349",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb2"
+        ],
+        "name": "J-Park Apparels Ltd.",
+        "address": "220-221, Singair Road, Hemayetpur, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "69366e00950bd719d1159cf3"
+        ],
+        "name": "H.R. Textile Mills Limited",
+        "address": "4, Karnapara, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-08T06:19:44.801Z",
+        "updatedAt": "2025-12-08T06:19:44.801Z"
+      },
+      {
+        "legacyIds": [
+          "6939194dd039adeebd637f19"
+        ],
+        "name": "Woo Ree Apparels Ltd",
+        "address": "Binod Bayeed, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-10T06:55:09.872Z",
+        "updatedAt": "2025-12-10T06:55:09.872Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b9b"
+        ],
+        "name": "Continental Garments Industries Pvt. Ltd.",
+        "address": "8, Dewan Idris Road, Boro Rangamatia, Ashulia, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba2"
+        ],
+        "name": "Dynasty Sweater (BD) Ltd.",
+        "address": "Aukpara, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bbe"
+        ],
+        "name": "Madany Fashion Wear Ltd.",
+        "address": "Madany Super Market, Hemayetpur Bus Stand, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b75"
+        ],
+        "name": "AB Apparels Ltd.",
+        "address": "225, Singair Road, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b91"
+        ],
+        "name": "Badrunnesa Sweaters Ltd.",
+        "address": "Bishmile Road, Kuturia, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b98"
+        ],
+        "name": "Boost Design Ltd.",
+        "address": "Yearpur, Zirabo, Ashulia, Savar, Dhaka-1341",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b99"
+        ],
+        "name": "Buildex Knit Composite Ltd.",
+        "address": "Plot 14, Simultola, Jamgora, DEPZ Road, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b9e"
+        ],
+        "name": "Delicate Knitwears Ltd.",
+        "address": "Rajaghat, Rajfulbaria, Savar, Dhaka-1347",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba6"
+        ],
+        "name": "Fashion Knit Garments Ltd.",
+        "address": "4, Karnapara, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba9"
+        ],
+        "name": "G.A.B. Ltd.",
+        "address": "Palashbari, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bad"
+        ],
+        "name": "Han Apparels Ltd.",
+        "address": "Holding C/17, Anandapur, Savar Thana Bus Stand, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc6"
+        ],
+        "name": "Millennium Sweater Ltd.",
+        "address": "Aukpara, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "69385bebc02240c76b5f7f08"
+        ],
+        "name": "Tanima Knit Composite",
+        "address": "10/27 Upazila Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-09T17:27:06.971Z",
+        "updatedAt": "2025-12-09T17:27:06.971Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b81"
+        ],
+        "name": "AKH Shirts Ltd.",
+        "address": "133-134, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b89"
+        ],
+        "name": "Aman Sweaters Ltd.",
+        "address": "Rajaghat Road, Rajfulbaria, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b8b"
+        ],
+        "name": "Angshuk Ltd.",
+        "address": "133-134, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b8d"
+        ],
+        "name": "Apical Industries Ltd.",
+        "address": "Zinzira, Birulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b9f"
+        ],
+        "name": "Desun Garments Ltd.",
+        "address": "89/1, Birulia Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba1"
+        ],
+        "name": "Dynasty Knit Fashions Ltd.",
+        "address": "Aukpara, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "69385aa8c02240c76b5f7f04"
+        ],
+        "name": "Denitex Limited",
+        "address": "9/1, Karnapara, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-09T17:21:44.780Z",
+        "updatedAt": "2025-12-09T17:21:44.780Z"
+      },
+      {
+        "legacyIds": [
+          "69391e20d039adeebd637f1b",
+          "69391d7bd039adeebd637f1a"
+        ],
+        "name": "Pratik Apparels Ltd",
+        "address": "39, Karnapara, Savar Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-10T07:15:43.959Z",
+        "updatedAt": "2025-12-10T07:15:43.959Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b78"
+        ],
+        "name": "Actor Sporting Ltd.",
+        "address": "Plot 33-35, DEPZ, Ganakbari, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b90"
+        ],
+        "name": "Asrotex Ltd.",
+        "address": "Various extensions in Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb3"
+        ],
+        "name": "Jeans Plus Ltd.",
+        "address": "Plot 398, Sreepur Bus Stand, Ganakbari, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "693669254d25cf83fe614b62"
+        ],
+        "name": "Pakiza Knit Composite Ltd.",
+        "address": "H# A-1/5, Main Road, Mojidpur, Savar, Dhaka.",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-08T05:59:01.594Z",
+        "updatedAt": "2025-12-08T05:59:01.594Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b7b"
+        ],
+        "name": "Ajax Sweater Ltd.",
+        "address": "Zirabo Bazar, Ashulia EPZ Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-10T06:43:45.942Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b7e"
+        ],
+        "name": "AKH Fashions Ltd.",
+        "address": "133-134, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b82"
+        ],
+        "name": "AKH Stitch Art Ltd.",
+        "address": "133-134, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb0"
+        ],
+        "name": "Ishayat Apparels Ltd.",
+        "address": "Narashinghapur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb7"
+        ],
+        "name": "Kingfisher Fashion Wear Ltd.",
+        "address": "Rangamatia, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc1"
+        ],
+        "name": "Maxcom International (BD) Ltd.",
+        "address": "37, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "69366f4a950bd719d1159cf5"
+        ],
+        "name": "TEAMTEX GROUP",
+        "address": "188/2, GA, Amin Bazar, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-08T06:25:14.215Z",
+        "updatedAt": "2025-12-08T06:25:14.215Z"
+      },
+      {
+        "legacyIds": [
+          "69385ed1c02240c76b5f7f0c"
+        ],
+        "name": "Anlima Textile LTD",
+        "address": "Karnapara, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-09T17:39:27.990Z",
+        "updatedAt": "2025-12-09T17:39:27.990Z"
+      },
+      {
+        "legacyIds": [
+          "69386232d5f41d91ef282648"
+        ],
+        "name": "GK Garments Ltd",
+        "address": "89, Berulia Road, Tati, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-09T17:53:54.197Z",
+        "updatedAt": "2025-12-09T17:53:54.197Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b74"
+        ],
+        "name": "A.M. Fashions Ltd.",
+        "address": "Narashinghapur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b7c"
+        ],
+        "name": "AKH Apparels Ltd.",
+        "address": "128/133-134, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b9a"
+        ],
+        "name": "Cold Asia Sweater Ltd.",
+        "address": "238, Middle Gazirchat, Dhamsona, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b9c"
+        ],
+        "name": "Corus Knit Composite Ltd.",
+        "address": "Wapda, Kabirpur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba0"
+        ],
+        "name": "Dibbo Fashions Ltd.",
+        "address": "Plot 193, Jamgora S.S. Ind. Park, Ashulia EPZ Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba4"
+        ],
+        "name": "Eton Fashions Ltd.",
+        "address": "Notunpara, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "693aa9016054c11d59659302"
+        ],
+        "name": "Mim Jim Fashion",
+        "address": "Ciramix, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-11T11:20:33.173Z",
+        "updatedAt": "2025-12-11T11:20:33.173Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b76"
+        ],
+        "name": "Aboni Knitwear Ltd.",
+        "address": "169-171, Tetulzhora, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b88"
+        ],
+        "name": "Aman Knittings Ltd.",
+        "address": "Kulasur, Hemayetpur, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba7"
+        ],
+        "name": "Fashion Zone Ltd.",
+        "address": "66/68, South Shampur, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb4"
+        ],
+        "name": "Jersey Knit Fashion Ltd.",
+        "address": "Serkondia, Molla Market, Ashulia, Savar, Dhaka-1341",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bbc"
+        ],
+        "name": "Lavish Design Ltd.",
+        "address": "23/3, Molla Road, Kathgora, Amtola, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "6938636fd5f41d91ef282649"
+        ],
+        "name": "Pacific Blue (Jeans Wear) Ltd",
+        "address": "A, Radio Colony bus stand, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-09T17:59:11.740Z",
+        "updatedAt": "2025-12-09T17:59:11.740Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b94"
+        ],
+        "name": "Banex Apparel Ltd.",
+        "address": "Jadurchor, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bab"
+        ],
+        "name": "Green Arrow Sweater Inds. Ltd.",
+        "address": "68/69, South Shampur, Hemayetpur, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb1"
+        ],
+        "name": "Jabe Apparels Ltd.",
+        "address": "Toyubpur, Zirabo, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bba"
+        ],
+        "name": "Lam Mim Apparels Ltd.",
+        "address": "Bangabandhu Road, Tongabari, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc0"
+        ],
+        "name": "Marigold Knittex Ltd.",
+        "address": "Akran, Birulia, Savar, Dhaka-1216",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b7f"
+        ],
+        "name": "AKH Knitting & Dyeing Ltd.",
+        "address": "92, Phulbaria, Tetuljhora, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b80"
+        ],
+        "name": "AKH Knitwear Ltd.",
+        "address": "133-134, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b84"
+        ],
+        "name": "Al-Muslim Group",
+        "address": "12/14, Gedda Karnapara, Ulail, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-10T06:43:42.207Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b87"
+        ],
+        "name": "Aman Graphics & Design Ltd.",
+        "address": "Nazim Nagar, Hemayetpur, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b8e"
+        ],
+        "name": "Apparel Gallery Ltd.",
+        "address": "144-148/152-154, Narashinghpur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc4"
+        ],
+        "name": "Metro Knitting & Dyeing Mills Ltd. (Factory-02)",
+        "address": "Charabag, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "693aa1056054c11d596592fb"
+        ],
+        "name": "Michini Eco Nihongo Gakko",
+        "address": "Talbag, Thana Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-11T10:46:26.525Z",
+        "updatedAt": "2025-12-11T10:46:26.525Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b7d"
+        ],
+        "name": "AKH Eco Apparels Ltd.",
+        "address": "133-134, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b95"
+        ],
+        "name": "Basundhara Garments Ltd.",
+        "address": "230-231, Nazim Nagar, Singair Road, Hemayetpur, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba8"
+        ],
+        "name": "Friends Knit Wear & Accessories Ltd.",
+        "address": "Tayebpur, Zirabo, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb6"
+        ],
+        "name": "Kaizen Fashions Ltd.",
+        "address": "120/5, Karnapara, Mezzanine (4th & 5th Floor), Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc5"
+        ],
+        "name": "Mid Night Sweaters Ltd.",
+        "address": "Goshbag, Zirabo, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "693666df4d25cf83fe614b5c"
+        ],
+        "name": "Home",
+        "address": ".",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-08T05:49:19.283Z",
+        "updatedAt": "2025-12-08T05:49:19.283Z"
+      },
+      {
+        "legacyIds": [
+          "69385b09c02240c76b5f7f05"
+        ],
+        "name": "SB Design ltd",
+        "address": "A-3/2,Talbag, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-09T17:23:21.219Z",
+        "updatedAt": "2025-12-09T17:23:21.219Z"
+      },
+      {
+        "legacyIds": [
+          "69391819d039adeebd637f18"
+        ],
+        "name": "Smart Fashionwear Ltd.",
+        "address": "Jamgora, Zirabo, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-10T06:50:01.257Z",
+        "updatedAt": "2025-12-10T06:50:01.257Z"
+      },
+      {
+        "legacyIds": [
+          "693a9eca6054c11d596592f9"
+        ],
+        "name": "Pencilwoodbd",
+        "address": "Advance Police Town, Rajphulbaria, Savar , Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-11T10:36:55.813Z",
+        "updatedAt": "2025-12-11T10:36:55.813Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b72"
+        ],
+        "name": "A.K.M. Knit Wear Ltd.",
+        "address": "14, Genda Karnapara, Ulail, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b7a"
+        ],
+        "name": "Agami Apparels Ltd.",
+        "address": "Nayapara, Kathgara, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b85"
+        ],
+        "name": "Alliance Apparels Ltd.",
+        "address": "225, Singair Road, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b92"
+        ],
+        "name": "Babylon Casualwear Ltd.",
+        "address": "Plot 23-24, Tetulzhora, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc2"
+        ],
+        "name": "Maya Mithu Fashion Ltd.",
+        "address": "Bashaid, Ashulia, Savar, Dhaka-1341",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b96"
+        ],
+        "name": "Beximco Fashions Ltd.",
+        "address": "Kabirpur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba3"
+        ],
+        "name": "Ethical Garments Ltd.",
+        "address": "East Norshinghpur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9baa"
+        ],
+        "name": "Golden Rich Sweaters Ltd.",
+        "address": "309, Palashbari, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bae"
+        ],
+        "name": "Haramayn Fashions Ltd.",
+        "address": "South Gouripur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9baf"
+        ],
+        "name": "Harry Fashion Ltd.",
+        "address": "Plot 72 & 82, DEPZ, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bbd"
+        ],
+        "name": "L.Z. Fashion Wear Ltd.",
+        "address": "Plot 154, DEPZ Extension, Ganakbari, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc3"
+        ],
+        "name": "Mehnaz Styles & Craft Ltd.",
+        "address": "Bangabandhu Road, Tongabari, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bc7"
+        ],
+        "name": "M.K. Apparels Ltd.",
+        "address": "Plot 60, Road 7, Ward 4, Block A, Kumkumari, Ashulia, Savar, Dhaka-1341",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b71"
+        ],
+        "name": "A.J. Super Garments Ltd.",
+        "address": "Aj Garden, Goshbag, Zirabo, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b77"
+        ],
+        "name": "Active Composite Ltd.",
+        "address": "Dewan Idris Road, Zirabo, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b86"
+        ],
+        "name": "Aman Fashions & Designs Ltd.",
+        "address": "Nalam, Mirzanagar, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb5"
+        ],
+        "name": "K.M. Fashions Ltd.",
+        "address": "Vorari Bot Tola, Rajfulbaria, Savar, Dhaka-1347",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bbb"
+        ],
+        "name": "L.R. Sports Ltd.",
+        "address": "Road 1, Block A, House 7, Falgoni Housing, Niribili, Nabinagar, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bbf"
+        ],
+        "name": "Manvill Styles Ltd.",
+        "address": "728, South Shyampur, Hemayetpur, Savar, Dhaka-1340",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "69385be4c02240c76b5f7f07"
+        ],
+        "name": "JK Group",
+        "address": "10/27 Upazila Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-09T17:27:00.843Z",
+        "updatedAt": "2025-12-10T06:25:07.976Z"
+      },
+      {
+        "legacyIds": [
+          "6939092bd039adeebd637f12"
+        ],
+        "name": "Mac-Tex Industries Ltd",
+        "address": "20 C R P Rd, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-10T05:46:18.900Z",
+        "updatedAt": "2025-12-10T05:46:18.900Z"
+      },
+      {
+        "legacyIds": [
+          "693955f4d039adeebd637f25"
+        ],
+        "name": "KGN MS. FASHIONS LTD",
+        "address": "Rajfulbaria, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-10T11:13:56.465Z",
+        "updatedAt": "2025-12-10T11:13:56.465Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b79"
+        ],
+        "name": "Afiya Knitwear Ltd.",
+        "address": "Holding 10/2, Block C, Road 3, Ward 2, Durgapur, Ashulia, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b93"
+        ],
+        "name": "Bando Eco Apparels Ltd.",
+        "address": "188/2, Block GA, Chanpur, Amin Bazar, Savar, Dhaka-1348",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9b9d"
+        ],
+        "name": "Delicate Garments Ltd.",
+        "address": "Rajaghat, Rajfulbaria, Savar, Dhaka-1347",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9ba5"
+        ],
+        "name": "Excom Fashions Ltd.",
+        "address": "Nimertek, Rajfulbaria, Savar, Dhaka-1347",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-02T10:00:00.000Z"
+      },
+      {
+        "legacyIds": [
+          "692de4d8424b35824f2b9bb8"
+        ],
+        "name": "Kims Corporation Ltd.",
+        "address": "16, Sutar Noardda, Arapara, Savar, Dhaka",
+        "contact": null,
+        "createdById": "01a19b7c-7fae-7505-814c-8706a16dd7d8",
+        "createdAt": "2025-12-02T10:00:00.000Z",
+        "updatedAt": "2025-12-10T11:11:05.699Z"
+      },
+      {
+        "legacyIds": [
+          "693916a8d039adeebd637f17"
+        ],
+        "name": "Standard Garments",
+        "address": "Gedda Karnapara, Ulail, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2025-12-10T06:43:52.731Z",
+        "updatedAt": "2025-12-10T06:43:52.731Z"
+      },
+      {
+        "legacyIds": [
+          "6979efdb3f99567110e382d9"
+        ],
+        "name": "Savar",
+        "address": "Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-28T11:15:38.733Z",
+        "updatedAt": "2026-01-28T11:15:38.733Z"
+      },
+      {
+        "legacyIds": [
+          "6979f0d32d6fcb16324accb7"
+        ],
+        "name": "Singair",
+        "address": "Singair, Manikgong, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-28T11:19:46.577Z",
+        "updatedAt": "2026-01-28T11:19:46.577Z"
+      },
+      {
+        "legacyIds": [
+          "6979f2955731cecd3d4ffd8f"
+        ],
+        "name": "Dhamrai",
+        "address": "Dhamra, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-28T11:27:15.885Z",
+        "updatedAt": "2026-01-28T11:27:15.885Z"
+      },
+      {
+        "legacyIds": [
+          "6979f4a228b473c96adc0fe9"
+        ],
+        "name": "Mirpur",
+        "address": "Mirpur, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-28T11:36:01.236Z",
+        "updatedAt": "2026-01-28T11:36:01.236Z"
+      },
+      {
+        "legacyIds": [
+          "6979f64d002f117e07f7c50d"
+        ],
+        "name": "Hridoy Motors",
+        "address": "Thana Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-28T11:43:08.540Z",
+        "updatedAt": "2026-01-28T11:43:08.540Z"
+      },
+      {
+        "legacyIds": [
+          "6979f6d6a861ee5871cbfad1"
+        ],
+        "name": "Rangamati",
+        "address": "Rangamati Chittagong",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-28T11:45:25.436Z",
+        "updatedAt": "2026-01-28T11:45:25.436Z"
+      },
+      {
+        "legacyIds": [
+          "6979f789a861ee5871cbfad3"
+        ],
+        "name": "Sk Auto Center",
+        "address": "Genda, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-28T11:48:24.780Z",
+        "updatedAt": "2026-01-28T11:48:24.780Z"
+      },
+      {
+        "legacyIds": [
+          "697af88ed616e0a0305a355b"
+        ],
+        "name": "Polas Computer",
+        "address": "College Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:05:01.968Z",
+        "updatedAt": "2026-01-29T06:05:01.968Z"
+      },
+      {
+        "legacyIds": [
+          "697af901d616e0a0305a355d"
+        ],
+        "name": "New Cambridge School & College",
+        "address": "Vagolpur, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:06:56.398Z",
+        "updatedAt": "2026-01-29T06:06:56.398Z"
+      },
+      {
+        "legacyIds": [
+          "697af9d8d616e0a0305a355e"
+        ],
+        "name": "New Windows High School",
+        "address": "Doriyapur, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:10:31.655Z",
+        "updatedAt": "2026-01-29T06:10:31.655Z"
+      },
+      {
+        "legacyIds": [
+          "697af9fdd616e0a0305a355f"
+        ],
+        "name": "Imarot Computer",
+        "address": "Upozila, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:11:08.375Z",
+        "updatedAt": "2026-01-29T06:11:08.375Z"
+      },
+      {
+        "legacyIds": [
+          "697afa18d616e0a0305a3560"
+        ],
+        "name": "YWC",
+        "address": "Genda, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:11:35.663Z",
+        "updatedAt": "2026-01-29T06:11:35.663Z"
+      },
+      {
+        "legacyIds": [
+          "697afa32d616e0a0305a3561"
+        ],
+        "name": "Glorious School",
+        "address": "Raj fulbaria, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:12:01.351Z",
+        "updatedAt": "2026-01-29T06:12:01.351Z"
+      },
+      {
+        "legacyIds": [
+          "697afa5bd616e0a0305a3562"
+        ],
+        "name": "Rodala Model School",
+        "address": "Kornopara, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:12:42.903Z",
+        "updatedAt": "2026-01-29T06:12:42.903Z"
+      },
+      {
+        "legacyIds": [
+          "697afe1f066d977022c0df26"
+        ],
+        "name": "Red Sea Global",
+        "address": "An Nakheel, Riyadh 12382, Saudi Arabia",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T06:28:46.306Z",
+        "updatedAt": "2026-01-29T07:00:44.426Z"
+      },
+      {
+        "legacyIds": [
+          "697b1f037f1523070e5f3463"
+        ],
+        "name": "Amin Tailors",
+        "address": "Fulbaria, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T08:49:06.698Z",
+        "updatedAt": "2026-01-29T08:49:06.698Z"
+      },
+      {
+        "legacyIds": [
+          "697b1f1f7f1523070e5f3464"
+        ],
+        "name": "Sathi Tailor",
+        "address": "Vagolpur, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-01-29T08:49:34.719Z",
+        "updatedAt": "2026-01-29T08:49:34.719Z"
+      },
+      {
+        "legacyIds": [
+          "6aa8d59a517f66165f90d76d"
+        ],
+        "name": "Sarkar Tailer's",
+        "address": "Boruigram, Dhamrai",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:20:25.895Z",
+        "updatedAt": "2026-09-15T05:20:26.859Z"
+      },
+      {
+        "legacyIds": [
+          "6aa9112d601edc7159f53c37"
+        ],
+        "name": "Ambagan",
+        "address": "Senwalya o Ashulia/Savar",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-15T09:34:37.641Z",
+        "updatedAt": "2026-09-15T09:34:37.706Z"
+      },
+      {
+        "legacyIds": [
+          "6aa912a8601edc7159f53c58"
+        ],
+        "name": "Sirajganj",
+        "address": "kajipur, Sirajganj",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-15T09:40:56.455Z",
+        "updatedAt": "2026-09-15T09:40:56.507Z"
+      },
+      {
+        "legacyIds": [
+          "6aa91356601edc7159f53c66"
+        ],
+        "name": "Badda",
+        "address": "Badda, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-15T09:43:50.279Z",
+        "updatedAt": "2026-09-15T09:43:50.330Z"
+      },
+      {
+        "legacyIds": [
+          "6aa91402601edc7159f53c74"
+        ],
+        "name": "Bhabanipur",
+        "address": "Dhaka-Mymensingh Highway",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-15T09:46:42.342Z",
+        "updatedAt": "2026-09-15T09:46:42.403Z"
+      },
+      {
+        "legacyIds": [
+          "6aa915c2601edc7159f53c8a"
+        ],
+        "name": "Kolagachhiya",
+        "address": "Manikganj, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-15T09:54:10.335Z",
+        "updatedAt": "2026-09-15T09:54:10.391Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2170601edc7159f53cfa"
+        ],
+        "name": "Bank Colony",
+        "address": "Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T04:56:16.733Z",
+        "updatedAt": "2026-09-16T04:56:16.790Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2390601edc7159f53d21"
+        ],
+        "name": "Jirabo",
+        "address": "Ashulia, Savar",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:05:20.501Z",
+        "updatedAt": "2026-09-16T05:05:20.572Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2502601edc7159f53d3a"
+        ],
+        "name": "Gojaria",
+        "address": "Rajoir Upazilar, Madaripur",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:11:30.571Z",
+        "updatedAt": "2026-09-16T05:11:30.629Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa286b601edc7159f53d58"
+        ],
+        "name": "Kolagachia",
+        "address": "Manikganj Sadar",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:26:03.194Z",
+        "updatedAt": "2026-09-16T05:26:03.274Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2921601edc7159f53d76"
+        ],
+        "name": "Fulbaria",
+        "address": "Mymensingh",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:29:05.426Z",
+        "updatedAt": "2026-09-16T05:29:05.480Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2b14601edc7159f53d94"
+        ],
+        "name": "Daulatpur",
+        "address": "Daulatpur, Kushtia",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:37:24.443Z",
+        "updatedAt": "2026-09-16T05:37:24.575Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2ce1601edc7159f53dad"
+        ],
+        "name": "Daulatpurr",
+        "address": "Daulatpur, Manikganj",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:45:05.849Z",
+        "updatedAt": "2026-09-16T05:45:05.975Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2da7601edc7159f53dbd"
+        ],
+        "name": "Nakla",
+        "address": "Nakla, Sherpur",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:48:22.752Z",
+        "updatedAt": "2026-09-16T05:48:23.254Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa2fc8601edc7159f53de0"
+        ],
+        "name": "Lohajang",
+        "address": "Lohajang, Munshiganj",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T05:57:28.624Z",
+        "updatedAt": "2026-09-16T05:57:28.730Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa586cc492f72d233f9234"
+        ],
+        "name": "Nagarkait",
+        "address": "Nagarkait, Dhamrai",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T08:50:52.521Z",
+        "updatedAt": "2026-09-16T08:50:52.758Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa5948c492f72d233f924c"
+        ],
+        "name": "Baliadangi",
+        "address": "Baliadangi, Thakurgaon",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T08:54:32.616Z",
+        "updatedAt": "2026-09-16T08:54:32.894Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa59aec492f72d233f9257"
+        ],
+        "name": "Baniyachong",
+        "address": "Baniyachong, Habiganj",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T08:56:13.808Z",
+        "updatedAt": "2026-09-16T08:56:14.238Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa5cafc492f72d233f9270"
+        ],
+        "name": "Dakshin Dariapur",
+        "address": "Genda, Savar",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T09:09:03.023Z",
+        "updatedAt": "2026-09-16T09:09:03.261Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa603dc492f72d233f9285"
+        ],
+        "name": "Khulna Motors",
+        "address": "Thana Road, Savar",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T09:24:12.830Z",
+        "updatedAt": "2026-09-16T09:24:13.066Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa60c6c492f72d233f9291"
+        ],
+        "name": "Kishoreganj Motor",
+        "address": "Thana Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T09:26:29.926Z",
+        "updatedAt": "2026-09-16T09:26:30.178Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa61d185391542d1f0dd8c"
+        ],
+        "name": "Manikganj Motors",
+        "address": "Thana Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T09:30:56.918Z",
+        "updatedAt": "2026-09-16T09:30:57.203Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa62ac97c7c88cc31f8cc3"
+        ],
+        "name": "Anonna Motor",
+        "address": "Thana Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T09:34:36.701Z",
+        "updatedAt": "2026-09-16T09:34:36.967Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa63ae97c7c88cc31f8ccc"
+        ],
+        "name": "Bike Network",
+        "address": "Anaondopur, Aricha Highway",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T09:38:54.502Z",
+        "updatedAt": "2026-09-16T09:38:54.747Z"
+      },
+      {
+        "legacyIds": [
+          "6aaa647497c7c88cc31f8cdc"
+        ],
+        "name": "Haradhon Motors",
+        "address": "Thana Road, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-09-16T09:42:12.102Z",
+        "updatedAt": "2026-09-16T09:42:12.352Z"
+      },
+      {
+        "legacyIds": [
+          "6ae0894cc68496efdb882535"
+        ],
+        "name": "ACI Com",
+        "address": "Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-10-27T11:21:47.892Z",
+        "updatedAt": "2026-10-27T11:21:48.184Z"
+      },
+      {
+        "legacyIds": [
+          "6ae08978c68496efdb88253e"
+        ],
+        "name": "Katlapur Pre Cadet School",
+        "address": "Katlapur, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-10-27T11:22:31.706Z",
+        "updatedAt": "2026-10-27T11:22:32.009Z"
+      },
+      {
+        "legacyIds": [
+          "6ae089aec68496efdb882548"
+        ],
+        "name": "Lao he Mahfuz Madrasa",
+        "address": "Bank Colony, Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-10-27T11:23:26.218Z",
+        "updatedAt": "2026-10-27T11:23:26.521Z"
+      },
+      {
+        "legacyIds": [
+          "6ae089d3c68496efdb882552"
+        ],
+        "name": "RFL Group",
+        "address": "Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-10-27T11:24:03.530Z",
+        "updatedAt": "2026-10-27T11:24:03.815Z"
+      },
+      {
+        "legacyIds": [
+          "6ae08a17c68496efdb88255d"
+        ],
+        "name": "Ayul Ali Memorial School",
+        "address": "Anandapur , Savar, Dhaka",
+        "contact": null,
+        "createdById": null,
+        "createdAt": "2026-10-27T11:25:11.594Z",
+        "updatedAt": "2026-10-27T11:25:11.948Z"
+      }
+    ],
+    "skipped": [
+      {
+        "legacyId": "69391e20d039adeebd637f1b",
+        "name": "Pratik Apparels Ltd",
+        "reason": "merged 1 duplicate workplace name(s)"
+      }
+    ]
+  },
+  "jobholders": null
+}

@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"rootDir": "./",
+		"outDir": "./dist",
+		"module": "esnext",
+		"target": "esnext",
+		"moduleResolution": "bundler",
+		"lib": [
+			"ES2023"
+		],
+		"sourceMap": true,
+		"declaration": true,
+		"declarationMap": true,
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+		"strict": true,
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noUncheckedSideEffectImports": true,
+		"moduleDetection": "force",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"ignoreDeprecations": "6.0",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"noEmit": true
+	},
+	"include": [
+		"./src",
+		"./tsup.config.ts",
+		"./vitest.config.ts",
+		"./prisma.config.ts"
+	],
+	"exclude": [
+		"./node_modules",
+		"./dist",
+		"./src/generated"
+	]
+}

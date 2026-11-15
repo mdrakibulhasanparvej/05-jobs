@@ -1,0 +1,363 @@
+// ───────────── ACADEMY (02) ─────────────
+// Models verbatim from design §5. Service 02-academy owns this schema.
+
+// Enums live in enum.prisma (single enum file) — do not declare enums here.
+
+// Trade / TradeInfo / TradeShift / Batch / BatchShift are defined once in
+// trade.prisma (shared by every section) — do not redefine them here.
+
+model Donor {
+	id String @id @default(uuid(7)) @db.Uuid
+	name String @unique
+
+	batches Batch[]
+
+	@@map("donors")
+	@@schema("academy")
+}
+
+model TrainerTrade {
+	userId String @map("user_id") @db.Uuid
+	tradeId String @map("trade_id") @db.Uuid
+
+	user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+	trade Trade @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+
+	@@id([userId, tradeId])
+	@@map("trainer_trades")
+	@@schema("academy")
+}
+
+model ApplicantTrade {
+	// the trade a user picked at registration (user lives in identity, so a separate table)
+	userId    String   @id @map("user_id") @db.Uuid
+	tradeId   String   @map("trade_id") @db.Uuid
+	createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+	trade Trade @relation(fields: [tradeId], references: [id])
+
+	@@index([tradeId])
+	@@map("applicant_trades")
+	@@schema("academy")
+}
+
+// Universal training selection: one row per user (registered or admitted).
+// Pure IDs only — trade name, batch and shift details come from the relations.
+model StudentTraining {
+	id        String   @id @default(uuid(7)) @db.Uuid
+	userId    String   @unique @map("user_id") @db.Uuid
+	tradeId   String   @map("trade_id") @db.Uuid
+	batchId   String   @map("batch_id") @db.Uuid
+	shiftId   String?  @map("shift_id") @db.Uuid
+	createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	user  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+	trade Trade       @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+	batch Batch       @relation(fields: [batchId], references: [id], onDelete: Cascade)
+	shift TradeShift? @relation(fields: [shiftId], references: [id], onDelete: SetNull)
+
+	@@index([tradeId])
+	@@index([batchId])
+	@@map("student_trainings")
+	@@schema("academy")
+}
+
+// ── student records (standalone — not tied to identity.User) ──────────────
+// Personal data lives here because a student record can exist without a login
+// account (staff-entered / imported). The signed-in user's own trade choice is
+// still kept in StudentTraining (userId based).
+
+model StudentInformation {
+	id                 String    @id @default(uuid(7)) @db.Uuid
+	formNo             String    @unique @map("form_no")
+	mrNo               String?   @unique @map("mr_no")
+	photo              String?
+	name               String
+	gender             Gender
+	phone              String
+	nidOrBirthNo       String    @unique @map("nid_or_birth_no")
+	birthDate          DateTime  @map("birth_date") @db.Date
+	physicalDisability Boolean   @default(false) @map("physical_disability")
+	disabilityDetails  String?   @map("disability_details")
+
+	presentAddressId   String? @map("present_address_id") @db.Uuid
+	permanentAddressId String? @map("permanent_address_id") @db.Uuid
+
+	parent    ParentInformation?
+	guardian  GuardianInformation?
+	family    FamilyInformation?
+	education Education?
+	trades    StudentTrade[]
+	remarks   StudentRemark[]
+	payments  Payment[]
+	jobHolder JobHolder?
+	stories   SuccessStory[]
+
+	createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+	deletedAt DateTime? @map("deleted_at") @db.Timestamptz
+
+	presentAddress   Address? @relation("PresentAddress", fields: [presentAddressId], references: [id])
+	permanentAddress Address? @relation("PermanentAddress", fields: [permanentAddressId], references: [id])
+
+	@@index([phone])
+	@@map("student_informations")
+	@@schema("academy")
+}
+
+// Universal address (student present/permanent + guardian). Staff addresses
+// stay in identity.user_addresses.
+model Address {
+	id          String  @id @default(uuid(7)) @db.Uuid
+	addressLine String  @map("address_line") // "A-79, Bank Colony"
+	postOffice  String? @map("post_office")
+	upazila     String // Savar / Chuadanga
+	district    String // Dhaka / Chuadanga
+	division    String // Dhaka / Khulna
+	postCode    String? @map("post_code")
+
+	presentOf   StudentInformation[] @relation("PresentAddress")
+	permanentOf StudentInformation[] @relation("PermanentAddress")
+	guardians   GuardianInformation[]
+
+	createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	@@map("addresses")
+	@@schema("academy")
+}
+
+model ParentInformation {
+	id        String             @id @default(uuid(7)) @db.Uuid
+	studentId String             @unique @map("student_id") @db.Uuid
+	student   StudentInformation @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+	fatherName       String  @map("father_name")
+	fatherOccupation String? @map("father_occupation")
+	fatherPhone      String? @map("father_phone")
+	motherName       String  @map("mother_name")
+	motherOccupation String? @map("mother_occupation")
+	motherPhone      String? @map("mother_phone")
+
+	@@map("parent_informations")
+	@@schema("academy")
+}
+
+model GuardianInformation {
+	id        String             @id @default(uuid(7)) @db.Uuid
+	studentId String             @unique @map("student_id") @db.Uuid
+	student   StudentInformation @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+	name      String
+	relation  String // father
+	phone     String
+	addressId String? @map("address_id") @db.Uuid
+	address   Address? @relation(fields: [addressId], references: [id])
+
+	@@map("guardian_informations")
+	@@schema("academy")
+}
+
+model FamilyInformation {
+	id        String             @id @default(uuid(7)) @db.Uuid
+	studentId String             @unique @map("student_id") @db.Uuid
+	student   StudentInformation @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+	totalMembers Int @map("total_members") // 3
+	income       Int // 12000
+
+	@@map("family_informations")
+	@@schema("academy")
+}
+
+model Education {
+	id        String             @id @default(uuid(7)) @db.Uuid
+	studentId String             @unique @map("student_id") @db.Uuid
+	student   StudentInformation @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+	qualification String // Bachelor of Business Administration (BBA)
+	passingYear   Int    @map("passing_year") // 2023
+	result        String // "2.94" / "GPA 5.00" / "1st Class"
+	institution   String // Savar Govt. university College
+
+	@@map("educations")
+	@@schema("academy")
+}
+
+// One row per student enrollment. The composite FK rejects a shift that is not
+// active for the chosen batch (e.g. Graphic Design batch 1 only has A and D).
+model StudentTrade {
+	id           String             @id @default(uuid(7)) @db.Uuid
+	studentId    String             @map("student_id") @db.Uuid
+	student      StudentInformation @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+	tradeId String @map("trade_id") @db.Uuid
+	trade   Trade  @relation(fields: [tradeId], references: [id])
+
+	batchId      String     @map("batch_id") @db.Uuid
+	tradeShiftId String     @map("trade_shift_id") @db.Uuid
+	batchShift   BatchShift @relation(fields: [batchId, tradeShiftId], references: [batchId, tradeShiftId])
+
+	status ApprovalStatus      @default(PENDING)
+	result ExaminationResult?
+
+	createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	@@unique([studentId, batchId])
+	@@index([tradeId])
+	@@map("student_trades")
+	@@schema("academy")
+}
+
+model ExaminationResult {
+	id             String       @id @default(uuid(7)) @db.Uuid
+	studentTradeId String       @unique @map("student_trade_id") @db.Uuid
+	studentTrade   StudentTrade @relation(fields: [studentTradeId], references: [id], onDelete: Cascade)
+
+	theory     Int @default(0) // 70
+	practical  Int @default(0) // 90
+	viva       Int @default(0) // 20
+	totalMarks Int @default(0) @map("total_marks") // 180
+
+	attendedDays Int @default(0) @map("attended_days") // 40
+	totalDays    Int @default(0) @map("total_days") // 42
+
+	certificateSl String?      @unique @map("certificate_sl") // 6688
+	finalGrade    String?      @map("final_grade") // A+
+	status        ResultStatus @default(DRAFT)
+
+	createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	@@map("examination_results")
+	@@schema("academy")
+}
+
+model StudentRemark {
+	id        String             @id @default(uuid(7)) @db.Uuid
+	studentId String             @map("student_id") @db.Uuid
+	text      String
+	authorId  String?            @map("author_id") @db.Uuid
+	createdAt DateTime           @default(now()) @map("created_at") @db.Timestamptz
+
+	student StudentInformation @relation(fields: [studentId], references: [id], onDelete: Cascade)
+	author  User?              @relation("StudentRemarkAuthor", fields: [authorId], references: [id], onDelete: SetNull)
+
+	@@index([studentId, createdAt(sort: Desc)])
+	@@map("student_remarks")
+	@@schema("academy")
+}
+
+model Course {
+	id            String    @id @default(uuid(7)) @db.Uuid
+	slug          String    @unique
+	title         String
+	description   String?
+	thumbnailUrl  String?   @map("thumbnail_url")
+	isPublished   Boolean   @default(false) @map("is_published")
+	tradeId       String?   @map("trade_id") @db.Uuid
+	createdById   String?   @map("created_by_id") @db.Uuid
+	legacyMongoId String?   @unique @map("legacy_mongo_id") @db.Char(24)
+	createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+	deletedAt     DateTime? @map("deleted_at") @db.Timestamptz
+
+	trade       Trade?             @relation(fields: [tradeId], references: [id])
+	createdBy   User?              @relation("CourseCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+	modules     CourseModule[]
+	assignments CourseAssignment[]
+	feedback    StudentFeedback[]
+	feePlans    FeePlan[]
+
+	@@index([isPublished])
+	@@index([tradeId])
+	@@map("courses")
+	@@schema("academy")
+}
+
+model CourseModule {
+	id            String  @id @default(uuid(7)) @db.Uuid
+	courseId      String  @map("course_id") @db.Uuid
+	title         String
+	milestone     Int     @default(1)
+	sortOrder     Int     @default(0) @map("sort_order")
+	legacyMongoId String? @map("legacy_mongo_id") @db.Char(24)
+
+	course  Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+	videos  CourseVideo[]
+
+	@@index([courseId, sortOrder])
+	@@map("course_modules")
+	@@schema("academy")
+}
+
+model CourseVideo {
+	id              String  @id @default(uuid(7)) @db.Uuid
+	moduleId        String  @map("module_id") @db.Uuid
+	title           String
+	youtubeVideoId  String  @map("youtube_video_id")
+	durationSeconds Int?    @map("duration_seconds")
+	sortOrder       Int     @default(0) @map("sort_order")
+	legacyMongoId   String? @map("legacy_mongo_id") @db.Char(24) // to map legacy users.unlockedVideos/videoProgress
+
+	module    CourseModule    @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+	unlocks   VideoUnlock[]
+	progress  VideoProgress[]
+
+	@@index([moduleId, sortOrder])
+	@@map("course_videos")
+	@@schema("academy")
+}
+
+model CourseAssignment {
+	userId       String   @map("user_id") @db.Uuid
+	courseId     String   @map("course_id") @db.Uuid
+	assignedById String?  @map("assigned_by_id") @db.Uuid
+	assignedAt   DateTime @default(now()) @map("assigned_at") @db.Timestamptz
+
+	user       User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+	course     Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+	assignedBy User?  @relation("CourseAssignmentAssignedBy", fields: [assignedById], references: [id], onDelete: SetNull)
+
+	@@id([userId, courseId])
+	@@index([courseId])
+	@@map("course_assignments")
+	@@schema("academy")
+}
+
+model VideoUnlock {
+	userId       String   @map("user_id") @db.Uuid
+	videoId      String   @map("video_id") @db.Uuid
+	unlockedById String?  @map("unlocked_by_id") @db.Uuid
+	unlockedAt   DateTime @default(now()) @map("unlocked_at") @db.Timestamptz
+
+	user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+	video      CourseVideo @relation(fields: [videoId], references: [id], onDelete: Cascade)
+	unlockedBy User?       @relation("VideoUnlockGrantedBy", fields: [unlockedById], references: [id], onDelete: SetNull)
+
+	@@id([userId, videoId])
+	@@map("video_unlocks")
+	@@schema("academy")
+}
+
+model VideoProgress {
+	// no percent column (derived); no courseId (video → module → course)
+	userId         String   @map("user_id") @db.Uuid
+	videoId        String   @map("video_id") @db.Uuid
+	watchedSeconds Int      @default(0) @map("watched_seconds")
+	lastPosition   Int      @default(0) @map("last_position")
+	completed      Boolean  @default(false) // service sets true when percent >= 90
+	updatedAt      DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	user  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+	video CourseVideo @relation(fields: [videoId], references: [id], onDelete: Cascade)
+
+	@@id([userId, videoId])
+	@@index([videoId])
+	@@map("video_progress")
+	@@schema("academy")
+}

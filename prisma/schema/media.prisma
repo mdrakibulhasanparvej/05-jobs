@@ -1,0 +1,97 @@
+// ───────────── MEDIA (04) ─────────────
+// Models verbatim from design §5. Service 04-media owns this schema.
+
+// Enums live in enum.prisma (single enum file) — do not declare enums here.
+
+model VideoGallery {
+	id             String   @id @default(uuid(7)) @db.Uuid
+	title          String
+	tradeId        String?  @map("trade_id") @db.Uuid
+	youtubeVideoId String   @map("youtube_video_id")
+	isActive       Boolean  @default(true) @map("is_active")
+	createdById    String?  @map("created_by_id") @db.Uuid
+	createdAt      DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt      DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	trade     Trade? @relation(fields: [tradeId], references: [id], onDelete: SetNull)
+	createdBy User?  @relation("VideoGalleryCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+
+	@@index([tradeId])
+	@@index([isActive, createdAt(sort: Desc)])
+	@@map("video_galleries")
+	@@schema("media")
+}
+
+model PictureGallery {
+	id            String   @id @default(uuid(7)) @db.Uuid
+	title         String?
+	tradeId       String?  @map("trade_id") @db.Uuid
+	imageUrl      String   @map("image_url")
+	imagePublicId String?  @map("image_public_id")
+	isActive      Boolean  @default(true) @map("is_active")
+	createdById   String?  @map("created_by_id") @db.Uuid
+	createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt     DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	trade     Trade? @relation(fields: [tradeId], references: [id], onDelete: SetNull)
+	createdBy User?  @relation("PictureGalleryCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+
+	@@index([tradeId])
+	@@index([isActive, createdAt(sort: Desc)])
+	@@map("picture_galleries")
+	@@schema("media")
+}
+
+model StudentFeedback {
+	// author = user_id; name/photo joined from users
+	id               String         @id @default(uuid(7)) @db.Uuid
+	userId           String?        @map("user_id") @db.Uuid // mandatory for new records (Zod); null only for legacy
+	courseId         String?        @map("course_id") @db.Uuid
+	tradeId          String?        @map("trade_id") @db.Uuid
+	legacyAuthorName String?        @map("legacy_author_name") // migrated legacy records only; new code must never write it
+	rating           Int?           @db.SmallInt // CHECK 1..5 (raw SQL)
+	comment          String?
+	extra            Json? // unknown fields from the legacy strict:false schema; promote to columns after the survey
+	status           FeedbackStatus @default(PENDING)
+	createdAt        DateTime       @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt        DateTime       @updatedAt @map("updated_at") @db.Timestamptz
+
+	user    User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+	course  Course?  @relation(fields: [courseId], references: [id], onDelete: SetNull)
+	trade   Trade?   @relation(fields: [tradeId], references: [id], onDelete: SetNull)
+
+	@@index([courseId])
+	@@index([tradeId])
+	@@index([userId])
+	@@index([status, createdAt(sort: Desc)])
+	@@map("student_feedback")
+	@@schema("media")
+}
+
+model SuccessStory {
+	// when student_id is set, name/photo/trade come from users+batch (CHECK)
+	id            String   @id @default(uuid(7)) @db.Uuid
+	studentId     String?  @map("student_id") @db.Uuid
+	nameBn        String?  @map("name_bn") // local: mandatory when student_id is NULL
+	imageUrl      String?  @map("image_url") // local
+	imagePublicId String?  @map("image_public_id")
+	tradeId       String?  @map("trade_id") @db.Uuid // local
+	nameEn        String?  @map("name_en") // translation — may exist even with a student (not a duplicate)
+	roleBn        String?  @map("role_bn")
+	roleEn        String?  @map("role_en")
+	quoteBn       String?  @map("quote_bn")
+	quoteEn       String?  @map("quote_en")
+	sortOrder     Int      @default(0) @map("sort_order")
+	isActive      Boolean  @default(true) @map("is_active")
+	createdById   String?  @map("created_by_id") @db.Uuid
+	createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt     DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+	student   StudentInformation? @relation(fields: [studentId], references: [id], onDelete: SetNull)
+	trade     Trade?   @relation(fields: [tradeId], references: [id])
+	createdBy User?    @relation("SuccessStoryCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+
+	@@index([isActive, sortOrder])
+	@@map("success_stories")
+	@@schema("media")
+}

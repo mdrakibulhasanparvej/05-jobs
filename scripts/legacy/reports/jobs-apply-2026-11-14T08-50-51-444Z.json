@@ -1,0 +1,793 @@
+{
+  "generatedAt": "2026-11-14T08:50:51.443Z",
+  "mode": "apply",
+  "source": {
+    "uri": "mongodb://127.0.0.1:27017/amarShikkha",
+    "designations": 80,
+    "workplaces": 154,
+    "jobholders": 240
+  },
+  "designations": {
+    "planned": [
+      {
+        "legacyId": "6aa8d867a05dc248e6bca951",
+        "name": "Electrician",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:23.797Z",
+        "updatedAt": "2026-09-15T05:32:23.797Z"
+      },
+      {
+        "legacyId": "6aa8d867a05dc248e6bca954",
+        "name": "House Electrician",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:23.988Z",
+        "updatedAt": "2026-09-15T05:32:23.988Z"
+      },
+      {
+        "legacyId": "6aa8d868a05dc248e6bca957",
+        "name": "Junior Wiring Technician",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:24.190Z",
+        "updatedAt": "2026-09-15T05:32:24.190Z"
+      },
+      {
+        "legacyId": "6aa8d868a05dc248e6bca95a",
+        "name": "Senior Wiring Technician",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:24.376Z",
+        "updatedAt": "2026-09-15T05:32:24.376Z"
+      },
+      {
+        "legacyId": "6aa8d868a05dc248e6bca95d",
+        "name": "Electrical Maintenance Technician",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:24.618Z",
+        "updatedAt": "2026-09-15T05:32:24.618Z"
+      },
+      {
+        "legacyId": "6aa8d868a05dc248e6bca960",
+        "name": "Electrical Site Supervisor",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:24.758Z",
+        "updatedAt": "2026-09-15T05:32:24.758Z"
+      },
+      {
+        "legacyId": "6aa8d868a05dc248e6bca963",
+        "name": "Trainer",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:24.963Z",
+        "updatedAt": "2026-09-15T05:32:24.963Z"
+      },
+      {
+        "legacyId": "6aa8d869a05dc248e6bca966",
+        "name": "Trade Instructor",
+        "tradeId": "01a19aa6-4339-7458-a11b-cada3f1fe75b",
+        "tradeCode": "01",
+        "category": "Electrical House Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:25.111Z",
+        "updatedAt": "2026-09-15T05:32:25.111Z"
+      },
+      {
+        "legacyId": "6aa8d869a05dc248e6bca96c",
+        "name": "Industrial Electrician",
+        "tradeId": "01a1c56d-710d-76ac-a6a1-acf1c5ca6716",
+        "tradeCode": "02",
+        "category": "Industrial Electrical Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:25.428Z",
+        "updatedAt": "2026-09-15T05:32:25.428Z"
+      },
+      {
+        "legacyId": "6aa8d869a05dc248e6bca96f",
+        "name": "Electrical Maintenance Engineer",
+        "tradeId": "01a1c56d-710d-76ac-a6a1-acf1c5ca6716",
+        "tradeCode": "02",
+        "category": "Industrial Electrical Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:25.614Z",
+        "updatedAt": "2026-09-15T05:32:25.614Z"
+      },
+      {
+        "legacyId": "6aa8d869a05dc248e6bca972",
+        "name": "Electrical Maintenance Officer",
+        "tradeId": "01a1c56d-710d-76ac-a6a1-acf1c5ca6716",
+        "tradeCode": "02",
+        "category": "Industrial Electrical Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:25.773Z",
+        "updatedAt": "2026-09-15T05:32:25.773Z"
+      },
+      {
+        "legacyId": "6aa8d869a05dc248e6bca975",
+        "name": "Control Panel Technician",
+        "tradeId": "01a1c56d-710d-76ac-a6a1-acf1c5ca6716",
+        "tradeCode": "02",
+        "category": "Industrial Electrical Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:25.918Z",
+        "updatedAt": "2026-09-15T05:32:25.918Z"
+      },
+      {
+        "legacyId": "6aa8d86aa05dc248e6bca978",
+        "name": "Factory Electrical Supervisor",
+        "tradeId": "01a1c56d-710d-76ac-a6a1-acf1c5ca6716",
+        "tradeCode": "02",
+        "category": "Industrial Electrical Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:26.077Z",
+        "updatedAt": "2026-09-15T05:32:26.077Z"
+      },
+      {
+        "legacyId": "6aa8d86aa05dc248e6bca97b",
+        "name": "Industrial Maintenance Instructor",
+        "tradeId": "01a1c56d-710d-76ac-a6a1-acf1c5ca6716",
+        "tradeCode": "02",
+        "category": "Industrial Electrical Wiring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:26.277Z",
+        "updatedAt": "2026-09-15T05:32:26.277Z"
+      },
+      {
+        "legacyId": "6aa8d86aa05dc248e6bca981",
+        "name": "Sewing Machine Operator",
+        "tradeId": "01a1c56d-712e-77ce-bcdf-e16c85c04896",
+        "tradeCode": "03",
+        "category": "Industrial Sewing",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:26.602Z",
+        "updatedAt": "2026-10-27T09:07:10.164Z"
+      },
+      {
+        "legacyId": "6aa8d86aa05dc248e6bca984",
+        "name": "Production Floor Supervisor",
+        "tradeId": "01a1c56d-712e-77ce-bcdf-e16c85c04896",
+        "tradeCode": "03",
+        "category": "Industrial Sewing",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:26.759Z",
+        "updatedAt": "2026-09-15T05:32:26.759Z"
+      },
+      {
+        "legacyId": "6aa8d86aa05dc248e6bca987",
+        "name": "Quality Controller",
+        "tradeId": "01a1c56d-712e-77ce-bcdf-e16c85c04896",
+        "tradeCode": "03",
+        "category": "Industrial Sewing",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:26.909Z",
+        "updatedAt": "2026-10-27T09:07:19.446Z"
+      },
+      {
+        "legacyId": "6aa8d86ba05dc248e6bca98a",
+        "name": "Quality Inspector",
+        "tradeId": "01a1c56d-712e-77ce-bcdf-e16c85c04896",
+        "tradeCode": "03",
+        "category": "Industrial Sewing",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:27.070Z",
+        "updatedAt": "2026-09-15T05:32:27.070Z"
+      },
+      {
+        "legacyId": "6aa8d86ba05dc248e6bca98d",
+        "name": "Sample Maker",
+        "tradeId": "01a1c56d-712e-77ce-bcdf-e16c85c04896",
+        "tradeCode": "03",
+        "category": "Industrial Sewing",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:27.239Z",
+        "updatedAt": "2026-09-15T05:32:27.239Z"
+      },
+      {
+        "legacyId": "6aa8d86ba05dc248e6bca990",
+        "name": "Sewing Instructor",
+        "tradeId": "01a1c56d-712e-77ce-bcdf-e16c85c04896",
+        "tradeCode": "03",
+        "category": "Industrial Sewing",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:27.442Z",
+        "updatedAt": "2026-09-15T05:32:27.442Z"
+      },
+      {
+        "legacyId": "6aa8d86ba05dc248e6bca996",
+        "name": "Professional Tailor",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:27.857Z",
+        "updatedAt": "2026-09-15T05:32:27.857Z"
+      },
+      {
+        "legacyId": "6aa8d86ca05dc248e6bca999",
+        "name": "Dressmaker",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:28.035Z",
+        "updatedAt": "2026-09-15T05:32:28.035Z"
+      },
+      {
+        "legacyId": "6aa8d86ca05dc248e6bca99c",
+        "name": "Pattern Maker",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:28.234Z",
+        "updatedAt": "2026-09-15T05:32:28.234Z"
+      },
+      {
+        "legacyId": "6aa8d86ca05dc248e6bca99f",
+        "name": "Master Cutter",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:28.375Z",
+        "updatedAt": "2026-09-15T05:32:28.375Z"
+      },
+      {
+        "legacyId": "6aa8d86ca05dc248e6bca9a2",
+        "name": "Cutting Specialist",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:28.594Z",
+        "updatedAt": "2026-09-15T05:32:28.594Z"
+      },
+      {
+        "legacyId": "6aa8d86ca05dc248e6bca9a5",
+        "name": "Fashion Assistant",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:28.775Z",
+        "updatedAt": "2026-09-15T05:32:28.775Z"
+      },
+      {
+        "legacyId": "6aa8d86da05dc248e6bca9a8",
+        "name": "Boutique Technician",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:29.027Z",
+        "updatedAt": "2026-09-15T05:32:29.027Z"
+      },
+      {
+        "legacyId": "6aa8d86da05dc248e6bca9ab",
+        "name": "Tailoring Instructor",
+        "tradeId": "01a1c56d-715e-75d3-a41d-762a0b12118d",
+        "tradeCode": "04",
+        "category": "Dressmaking & Tailoring",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:29.221Z",
+        "updatedAt": "2026-09-15T05:32:29.221Z"
+      },
+      {
+        "legacyId": "6aa8d86da05dc248e6bca9b1",
+        "name": "Garments Maintenance Mechanic",
+        "tradeId": "01a1c56d-718d-70ba-9613-5a466eb0b187",
+        "tradeCode": "05",
+        "category": "Garments Machine Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:29.530Z",
+        "updatedAt": "2026-09-15T05:32:29.530Z"
+      },
+      {
+        "legacyId": "6aa8d86da05dc248e6bca9b4",
+        "name": "Sewing Machine Technician",
+        "tradeId": "01a1c56d-718d-70ba-9613-5a466eb0b187",
+        "tradeCode": "05",
+        "category": "Garments Machine Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:29.684Z",
+        "updatedAt": "2026-09-15T05:32:29.684Z"
+      },
+      {
+        "legacyId": "6aa8d86da05dc248e6bca9b7",
+        "name": "Equipment Maintenance Supervisor",
+        "tradeId": "01a1c56d-718d-70ba-9613-5a466eb0b187",
+        "tradeCode": "05",
+        "category": "Garments Machine Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:29.820Z",
+        "updatedAt": "2026-09-15T05:32:29.820Z"
+      },
+      {
+        "legacyId": "6aa8d86ea05dc248e6bca9ba",
+        "name": "Technical Support Specialist (RMG Sector)",
+        "tradeId": "01a1c56d-718d-70ba-9613-5a466eb0b187",
+        "tradeCode": "05",
+        "category": "Garments Machine Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:30.024Z",
+        "updatedAt": "2026-09-15T05:32:30.024Z"
+      },
+      {
+        "legacyId": "6aa8d86ea05dc248e6bca9bd",
+        "name": "Technical Trainer",
+        "tradeId": "01a1c56d-718d-70ba-9613-5a466eb0b187",
+        "tradeCode": "05",
+        "category": "Garments Machine Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:30.268Z",
+        "updatedAt": "2026-09-15T05:32:30.268Z"
+      },
+      {
+        "legacyId": "6aa8d86ea05dc248e6bca9c3",
+        "name": "Computer Operator",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:30.617Z",
+        "updatedAt": "2026-09-15T05:32:30.617Z"
+      },
+      {
+        "legacyId": "6aa8d86ea05dc248e6bca9c6",
+        "name": "Office Assistant",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:30.790Z",
+        "updatedAt": "2026-09-15T05:32:30.790Z"
+      },
+      {
+        "legacyId": "6aa8d86ea05dc248e6bca9c9",
+        "name": "Data Entry Operator",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:30.964Z",
+        "updatedAt": "2026-09-15T05:32:30.964Z"
+      },
+      {
+        "legacyId": "6aa8d86fa05dc248e6bca9cc",
+        "name": "IT Support Executive",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:31.170Z",
+        "updatedAt": "2026-09-15T05:32:31.170Z"
+      },
+      {
+        "legacyId": "6aa8d86fa05dc248e6bca9cf",
+        "name": "IT Support Technician",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:31.347Z",
+        "updatedAt": "2026-09-15T05:32:31.347Z"
+      },
+      {
+        "legacyId": "6aa8d86fa05dc248e6bca9d2",
+        "name": "Front Desk Officer",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:31.538Z",
+        "updatedAt": "2026-09-15T05:32:31.538Z"
+      },
+      {
+        "legacyId": "6aa8d86fa05dc248e6bca9d5",
+        "name": "Administrative Officer",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:31.677Z",
+        "updatedAt": "2026-09-15T05:32:31.677Z"
+      },
+      {
+        "legacyId": "6aa8d86fa05dc248e6bca9d8",
+        "name": "Computer Trainer",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:31.857Z",
+        "updatedAt": "2026-09-15T05:32:31.857Z"
+      },
+      {
+        "legacyId": "6aa8d870a05dc248e6bca9db",
+        "name": "Assistant Trainer",
+        "tradeId": "01a1c56d-71af-72fb-bf46-81405bf9e508",
+        "tradeCode": "06",
+        "category": "Computer",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:32.016Z",
+        "updatedAt": "2026-09-15T05:32:32.016Z"
+      },
+      {
+        "legacyId": "6aa8d870a05dc248e6bca9e1",
+        "name": "Freelance Digital Marketer",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Com. Freelancing & Sopken Eng.",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:32.417Z",
+        "updatedAt": "2026-09-15T05:32:32.417Z"
+      },
+      {
+        "legacyId": "6aa8d870a05dc248e6bca9e4",
+        "name": "Content Creator",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Com. Freelancing & Sopken Eng.",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:32.617Z",
+        "updatedAt": "2026-09-15T05:32:32.617Z"
+      },
+      {
+        "legacyId": "6aa8d870a05dc248e6bca9e7",
+        "name": "Virtual Assistant (VA)",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Com. Freelancing & Sopken Eng.",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:32.803Z",
+        "updatedAt": "2026-09-15T05:32:32.803Z"
+      },
+      {
+        "legacyId": "6aa8d870a05dc248e6bca9ea",
+        "name": "Customer Support Executive",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Com. Freelancing & Sopken Eng.",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:32.996Z",
+        "updatedAt": "2026-09-15T05:32:32.996Z"
+      },
+      {
+        "legacyId": "6aa8d871a05dc248e6bca9ed",
+        "name": "Telecaller",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Com. Freelancing & Sopken Eng.",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:33.152Z",
+        "updatedAt": "2026-09-15T05:32:33.152Z"
+      },
+      {
+        "legacyId": "6aa8d871a05dc248e6bca9f0",
+        "name": "Client Communication Executive",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Com. Freelancing & Sopken Eng.",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:33.284Z",
+        "updatedAt": "2026-09-15T05:32:33.284Z"
+      },
+      {
+        "legacyId": "6aa8d871a05dc248e6bca9f3",
+        "name": "Freelancing Instructor",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Com. Freelancing & Sopken Eng.",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:33.416Z",
+        "updatedAt": "2026-09-15T05:32:33.416Z"
+      },
+      {
+        "legacyId": "6aa8d871a05dc248e6bca9f9",
+        "name": "Motorcycle Mechanic",
+        "tradeId": "01a1c56d-71ff-739c-ba46-325390dd427c",
+        "tradeCode": "08",
+        "category": "Motorbike Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:33.758Z",
+        "updatedAt": "2026-09-15T05:32:33.758Z"
+      },
+      {
+        "legacyId": "6aa8d871a05dc248e6bca9fc",
+        "name": "Motorcycle Technician",
+        "tradeId": "01a1c56d-71ff-739c-ba46-325390dd427c",
+        "tradeCode": "08",
+        "category": "Motorbike Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:33.895Z",
+        "updatedAt": "2026-09-15T05:32:33.895Z"
+      },
+      {
+        "legacyId": "6aa8d872a05dc248e6bca9ff",
+        "name": "Automobile Workshop Supervisor",
+        "tradeId": "01a1c56d-71ff-739c-ba46-325390dd427c",
+        "tradeCode": "08",
+        "category": "Motorbike Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:34.007Z",
+        "updatedAt": "2026-09-15T05:32:34.007Z"
+      },
+      {
+        "legacyId": "6aa8d872a05dc248e6bcaa02",
+        "name": "Service Advisor",
+        "tradeId": "01a1c56d-71ff-739c-ba46-325390dd427c",
+        "tradeCode": "08",
+        "category": "Motorbike Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:34.094Z",
+        "updatedAt": "2026-09-15T05:32:34.094Z"
+      },
+      {
+        "legacyId": "6aa8d872a05dc248e6bcaa05",
+        "name": "Service Master",
+        "tradeId": "01a1c56d-71ff-739c-ba46-325390dd427c",
+        "tradeCode": "08",
+        "category": "Motorbike Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:34.217Z",
+        "updatedAt": "2026-09-15T05:32:34.217Z"
+      },
+      {
+        "legacyId": "6aa8d872a05dc248e6bcaa08",
+        "name": "Two-Wheeler Technical Specialist",
+        "tradeId": "01a1c56d-71ff-739c-ba46-325390dd427c",
+        "tradeCode": "08",
+        "category": "Motorbike Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:34.360Z",
+        "updatedAt": "2026-09-15T05:32:34.360Z"
+      },
+      {
+        "legacyId": "6aa8d872a05dc248e6bcaa0b",
+        "name": "Motorbike Technical Trainer",
+        "tradeId": "01a1c56d-71ff-739c-ba46-325390dd427c",
+        "tradeCode": "08",
+        "category": "Motorbike Mechanics",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:34.519Z",
+        "updatedAt": "2026-09-15T05:32:34.519Z"
+      },
+      {
+        "legacyId": "6aa8d872a05dc248e6bcaa11",
+        "name": "Spoken English Trainer",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Spoken English",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:34.826Z",
+        "updatedAt": "2026-09-15T05:32:34.826Z"
+      },
+      {
+        "legacyId": "6aa8d872a05dc248e6bcaa14",
+        "name": "Spoken English Instructor",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Spoken English",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:34.966Z",
+        "updatedAt": "2026-09-15T05:32:34.966Z"
+      },
+      {
+        "legacyId": "6aa8d873a05dc248e6bcaa17",
+        "name": "Customer Service Representative (CSR)",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Spoken English",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:35.146Z",
+        "updatedAt": "2026-09-15T05:32:35.146Z"
+      },
+      {
+        "legacyId": "6aa8d873a05dc248e6bcaa1a",
+        "name": "Front Office Executive",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Spoken English",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:35.361Z",
+        "updatedAt": "2026-09-15T05:32:35.361Z"
+      },
+      {
+        "legacyId": "6aa8d873a05dc248e6bcaa1d",
+        "name": "English Language Facilitator",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Spoken English",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:35.580Z",
+        "updatedAt": "2026-09-15T05:32:35.580Z"
+      },
+      {
+        "legacyId": "6aa8d873a05dc248e6bcaa20",
+        "name": "Communication Skills Coach",
+        "tradeId": "01a1c56d-7211-74ad-8bf4-e9e6cb4a3c6e",
+        "tradeCode": "09",
+        "category": "Spoken English",
+        "isActive": true,
+        "createdById": null,
+        "createdAt": "2026-09-15T05:32:35.748Z",
+        "updatedAt": "2026-09-15T05:32:35.748Z"
+      }
+    ],
+    "skipped": [
+      {
+        "legacyId": "6aa8d874a05dc248e6bcaa26",
+        "name": "Digital Marketing Executive",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d874a05dc248e6bcaa29",
+        "name": "Digital Marketing Specialist",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d874a05dc248e6bcaa2c",
+        "name": "Facebook Ads Manager",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d874a05dc248e6bcaa2f",
+        "name": "Performance Marketer",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d875a05dc248e6bcaa32",
+        "name": "Social Media Manager",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d875a05dc248e6bcaa35",
+        "name": "Content Strategist",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d875a05dc248e6bcaa38",
+        "name": "AI-Powered Digital Marketer",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d875a05dc248e6bcaa3b",
+        "name": "Growth Hacker",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d875a05dc248e6bcaa3e",
+        "name": "Social Media Analyst",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d876a05dc248e6bcaa41",
+        "name": "Digital Marketing Trainer",
+        "reason": "category \"Digital Marketing (Facebook Marketing with AI)\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d876a05dc248e6bcaa47",
+        "name": "Prompt Engineer",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d876a05dc248e6bcaa4a",
+        "name": "AI Prompt Specialist",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d876a05dc248e6bcaa4d",
+        "name": "Generative AI Specialist",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d877a05dc248e6bcaa50",
+        "name": "Generative AI Consultant",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d877a05dc248e6bcaa53",
+        "name": "AI Content Operations Specialist",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d877a05dc248e6bcaa56",
+        "name": "AI Workflow Automation Specialist",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d877a05dc248e6bcaa59",
+        "name": "Conversational AI Designer",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      },
+      {
+        "legacyId": "6aa8d877a05dc248e6bcaa5c",
+        "name": "AI & Prompt Engineering Instructor",
+        "reason": "category \"AI Prompt Engineer\" has no matching trade"
+      }
+    ]
+  },
+  "workplaces": {
+    "planned": [],
+    "skipped": []
+  },
+  "jobholders": null
+}

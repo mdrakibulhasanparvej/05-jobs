@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-11-14T08:50:24.038Z",
+  "mode": "apply",
+  "source": {
+    "uri": "mongodb://127.0.0.1:27017/amarShikkha",
+    "designations": 80,
+    "workplaces": 154,
+    "jobholders": 240
+  },
+  "designations": {
+    "planned": [],
+    "skipped": []
+  },
+  "workplaces": {
+    "planned": [],
+    "skipped": []
+  },
+  "jobholders": null
+}

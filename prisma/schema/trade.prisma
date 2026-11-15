@@ -1,0 +1,145 @@
+// ───────────── TRADE (shared across every section) ─────────────
+// Universal trade catalogue derived from the frontend data (public/trades.json).
+// This file is the single source of truth for Trade / TradeInfo / TradeShift /
+// Batch / BatchShift. Other domain files must NOT redefine them — they only link
+// to them (Course, TrainerTrade, ApplicantTrade, JobHolder, SuccessStory,
+// Student, FeePlan). Owned by academy, reused by jobs, media and billing.
+//
+// House rules (same as the rest of prisma/schema):
+//   every column @map("snake_case"), every model @@map("snake_case_plural"),
+//   every model @@schema("academy").
+//
+// RECONCILIATION NOTE: the running API/migrations still use the legacy trade
+// and batch columns (`name_bn`, `name_en`, `is_active`, `batch_number`,
+// `batch_code`, `shift`, the admission window and `donor_id`). Those columns
+// therefore stay on the models. The richer catalogue columns (`trade_name`,
+// `image`, `fee`, `batch_no`, ...) are additive and optional/defaulted so a
+// future migration can promote them without breaking existing rows.
+
+model Trade {
+	id            String  @id @default(uuid(7)) @db.Uuid
+	code          String  @unique // "01", "02" ...
+	nameBn        String? @map("name_bn") // current admin label (Bangla)
+	nameEn        String  @map("name_en") // current admin label (English)
+	isActive      Boolean @default(true) @map("is_active")
+
+	tradeName     String? @map("trade_name") // "Electrical House Wiring"
+	image         String?
+	details       String  @default("")
+	detailsEn     String  @default("") @map("details_en")
+	mobile        String? // separate from details — own column
+	fee           Int     @default(0)
+	feeUnit       String  @default("BDT") @map("fee_unit")
+
+	weeklyClassBn String  @default("") @map("weekly_class_bn")
+	weeklyClassEn String  @default("") @map("weekly_class_en")
+	weekendBn     String  @default("") @map("weekend_bn")
+	weekendEn     String  @default("") @map("weekend_en")
+	batchTypeBn   String  @default("") @map("batch_type_bn") // "নিয়মিত ব্যাচ"
+	batchTypeEn   String  @default("") @map("batch_type_en") // "Regular Batch"
+
+	info     TradeInfo?
+	shifts   TradeShift[]
+	batches  Batch[]
+
+	// back-relations from the other sections
+	courses       Course[]
+	trainerTrades TrainerTrade[]
+	applicants    ApplicantTrade[]
+	designations  Designation[]
+	stories       SuccessStory[]
+	pictureGalleries PictureGallery[]
+	videoGalleries   VideoGallery[]
+	feedbacks        StudentFeedback[]
+	trainings     StudentTraining[]
+	studentTrades StudentTrade[]
+
+	createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz
+	updatedAt     DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+	@@map("trades")
+	@@schema("academy")
+}
+
+model TradeInfo {
+	id      String @id @default(uuid(7)) @db.Uuid
+	tradeId String @unique @map("trade_id") @db.Uuid
+
+	isBteb Boolean @default(false) @map("is_bteb")
+	seats        Int // 20
+	durationDays Int    @map("duration_days") // 60, 45, 90, 120
+	durationBn   String @map("duration_bn") // "২ মাস"
+	durationEn   String @map("duration_en") // "2 months"
+	dailyHours   Int    @map("daily_hours") // 4 or 2
+	routineBn    String @map("routine_bn")
+	routineEn    String @map("routine_en")
+
+	minGrade        Int    @map("min_grade") // 5 or 8
+	qualificationBn String @map("qualification_bn")
+	qualificationEn String @map("qualification_en")
+
+	trade Trade @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+
+	@@map("trade_infos")
+	@@schema("academy")
+}
+
+model TradeShift {
+	id      String @id @default(uuid(7)) @db.Uuid
+	tradeId String @map("trade_id") @db.Uuid
+
+	code      String // "A", "B", "C" ...
+	startTime String @map("start_time") // "09:00"
+	endTime   String @map("end_time") // "13:00" (24h)
+
+	trade       Trade        @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+	batchShifts BatchShift[]
+	trainings   StudentTraining[]
+
+	@@unique([tradeId, code])
+	@@map("trade_shifts")
+	@@schema("academy")
+}
+
+model Batch {
+	id      String @id @default(uuid(7)) @db.Uuid
+	tradeId String @map("trade_id") @db.Uuid
+
+	// legacy/current columns used by the running API
+	batchNumber       String    @map("batch_number") // "5", "05" — text (legacy data is mixed)
+	batchCode         String    @unique @map("batch_code") // "05-A-2026"
+	shift             String? // batch level shift label; a student can override it
+	startDate         DateTime? @map("start_date") @db.Date
+	endDate           DateTime? @map("end_date") @db.Date
+	admissionOpensAt  DateTime? @map("admission_opens_at") @db.Timestamptz // which batch shows on the admission form
+	admissionClosesAt DateTime? @map("admission_closes_at") @db.Timestamptz
+	donorId           String?   @map("donor_id") @db.Uuid
+
+	// richer catalogue fields (additive, optional until migrated)
+	nameBn  String? @map("name_bn") // "১ম ব্যাচ"
+	nameEn  String? @map("name_en") // "1st Batch"
+
+	trade    Trade        @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+	donor    Donor?       @relation(fields: [donorId], references: [id])
+	shifts   BatchShift[]
+	feePlans FeePlan[]
+	trainings StudentTraining[]
+
+	@@index([tradeId, batchNumber])
+	@@index([startDate, endDate])
+	@@map("batches")
+	@@schema("academy")
+}
+
+model BatchShift {
+	batchId      String @map("batch_id") @db.Uuid
+	tradeShiftId String @map("trade_shift_id") @db.Uuid
+
+	batch      Batch      @relation(fields: [batchId], references: [id], onDelete: Cascade)
+	tradeShift TradeShift @relation(fields: [tradeShiftId], references: [id], onDelete: Cascade)
+	studentTrades StudentTrade[]
+
+	@@id([batchId, tradeShiftId])
+	@@map("batch_shifts")
+	@@schema("academy")
+}

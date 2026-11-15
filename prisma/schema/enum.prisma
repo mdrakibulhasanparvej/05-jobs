@@ -1,0 +1,120 @@
+// ───────────── ALL ENUMS (single file) ─────────────
+// Every enum in the database lives here so the shared vocabulary is visible in
+// one place. Prisma does not nest enums per schema — only the @@schema
+// attribute decides which Postgres schema an enum is created in, so each enum
+// below keeps the schema it belongs to.
+//
+// Models must NOT declare enums anymore; add new enums to this file.
+
+// ── IDENTITY (01) ──
+
+enum Role {
+	ADMIN
+	MODERATOR
+	TRAINER
+	ACCOUNTS
+	JP_MO
+	STUDENT
+
+	@@schema("identity")
+}
+
+enum UserStatus {
+	PENDING
+	ACTIVE
+	REJECTED
+	BLOCKED
+
+	@@schema("identity")
+}
+
+enum Gender {
+	MALE
+	FEMALE
+	OTHER
+
+	@@schema("identity")
+}
+
+enum AddressKind {
+	PRESENT
+	PERMANENT
+
+	@@schema("identity")
+}
+
+enum AuthTokenPurpose {
+	VERIFY_EMAIL
+	RESET_PASSWORD
+
+	@@schema("identity")
+}
+
+// ── ACADEMY (02) ──
+
+/** StudentTrade approval (one enrollment per student + batch). */
+enum ApprovalStatus {
+	PENDING
+	APPROVED
+	REJECTED
+
+	@@schema("academy")
+}
+
+/** ExaminationResult publication state. */
+enum ResultStatus {
+	DRAFT
+	PUBLISHED
+
+	@@schema("academy")
+}
+
+// ── BILLING (module of 02-academy) ──
+
+enum PaymentKind {
+	ADMISSION_FEE
+	COURSE_FEE
+	DONATION
+
+	@@schema("billing")
+}
+
+enum PaymentStatus {
+	PENDING
+	SUCCEEDED
+	FAILED
+	CANCELED
+	REFUNDED
+	PARTIALLY_REFUNDED
+
+	@@schema("billing")
+}
+
+enum PaymentGateway {
+	STRIPE
+	SSLCOMMERZ
+	BKASH
+	NAGAD
+	MANUAL
+
+	@@schema("billing")
+}
+
+enum PaymentMethod {
+	CARD
+	MOBILE_BANKING
+	BANK_TRANSFER
+	CASH
+
+	@@schema("billing")
+}
+
+// ── MEDIA (04) ──
+
+enum FeedbackStatus {
+	PENDING
+	APPROVED
+	REJECTED
+
+	@@schema("media")
+}
