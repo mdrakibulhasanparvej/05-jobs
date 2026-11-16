@@ -59,13 +59,36 @@ const ACCESS_TOKEN_MAX_AGE = ttlToMs(config.access_token_ttl, 15 * MINUTE);
 const REFRESH_TOKEN_MAX_AGE = ttlToMs(config.refresh_token_ttl, 30 * DAY);
 const REFRESH_TOKEN_TTL_SECONDS = Math.floor(REFRESH_TOKEN_MAX_AGE / 1000);
 
+/**
+ * The browser must drop the access cookie BEFORE the JWT inside it expires.
+ * Otherwise a request can still carry an expired token — and the API then
+ * answers "jwt expired" instead of "not logged in", which used to skip the
+ * silent refresh. A 60-second safety margin makes the next call a plain 401.
+ */
+const ACCESS_TOKEN_COOKIE_MAX_AGE = Math.max(
+	ACCESS_TOKEN_MAX_AGE - 60 * SECOND,
+	30 * SECOND,
+);
+
+/**
+ * A rotated-out refresh token can legitimately be presented again within this
+ * window: two tabs refreshing at the same moment, or a request the browser
+ * retried. Without the grace period the first rotation looks like token theft
+ * and revokes the whole family — every multi-tab user is signed out at the
+ * 15-minute mark.
+ */
+const REFRESH_REUSE_GRACE_MS = 30 * SECOND;
+
 // cookies track the token lifetimes instead of hardcoded values; only the
 // access cookie may authenticate API calls (D4)
 export const sessionCookieOptions = () => ({
 	httpOnly: true,
 	secure: config.environment !== "development",
-	sameSite:
-		config.environment === "development" ? ("lax" as const) : ("none" as const),
+	// The browser only ever talks to the Next.js origin (same-origin rewrites),
+	// so every API call is same-site: `lax` is sufficient here. `none` is only
+	// needed for a genuine cross-site API call, and it invites third-party
+	// cookie blocking without adding anything.
+	sameSite: "lax" as const,
 	path: "/",
 	...(config.cookie_domain ? { domain: config.cookie_domain } : {}),
 });
@@ -78,7 +101,7 @@ export const setSessionCookies = (
 
 	res.cookie("access_token", tokens.accessToken, {
 		...options,
-		maxAge: ACCESS_TOKEN_MAX_AGE,
+		maxAge: ACCESS_TOKEN_COOKIE_MAX_AGE,
 	});
 	res.cookie("refresh_token", tokens.refreshToken, {
 		...options,
@@ -176,7 +199,9 @@ export const issueSession = async (user: ISessionUser, meta: ISessionMeta) => {
 
 /**
  * Refresh rotation: the presented token must be a live, unexpired row. A
- * PRESENTED-AND-REVOKED token is reuse — the whole family dies.
+ * PRESENTED-AND-REVOKED token is reuse — the whole family dies — unless it was
+ * rotated out within the grace window and the family still has a live
+ * successor (two tabs refreshing at once, or a browser retry).
  */
 export const rotateSession = async (
 	refreshToken: string | undefined,
@@ -201,16 +226,35 @@ export const rotateSession = async (
 	}
 
 	if (row.revokedAt) {
-		// reuse of a rotated-out token ⇒ theft detection (design §7.3)
-		await prisma.refreshToken.updateMany({
-			where: { familyId: row.familyId, revokedAt: null },
-			data: { revokedAt: new Date() },
-		});
+		const withinGrace =
+			Date.now() - row.revokedAt.getTime() <= REFRESH_REUSE_GRACE_MS;
 
-		throw new AppError(
-			status.UNAUTHORIZED,
-			"Your session has expired. Please log in again",
-		);
+		// A replay inside the grace window is only legitimate when the family
+		// still has a live successor (i.e. the row was rotated out, not ended).
+		// Logout and password-reset revoke every row, so those stay rejected.
+		const liveSuccessor = withinGrace
+			? await prisma.refreshToken.findFirst({
+					where: {
+						familyId: row.familyId,
+						revokedAt: null,
+						expiresAt: { gt: new Date() },
+					},
+					select: { id: true },
+				})
+			: null;
+
+		if (!liveSuccessor) {
+			// reuse of a rotated-out token ⇒ theft detection (design §7.3)
+			await prisma.refreshToken.updateMany({
+				where: { familyId: row.familyId, revokedAt: null },
+				data: { revokedAt: new Date() },
+			});
+
+			throw new AppError(
+				status.UNAUTHORIZED,
+				"Your session has expired. Please log in again",
+			);
+		}
 	}
 
 	if (row.expiresAt.getTime() <= Date.now()) {
@@ -232,10 +276,12 @@ export const rotateSession = async (
 		status: user.status,
 	};
 
-	// revoke old + issue new in the SAME family, atomically
+	// revoke old + issue new in the SAME family, atomically. updateMany covers
+	// both the normal path (the presented row is live) and a grace replay (the
+	// presented row is already revoked, but its successor is still live).
 	const refreshTokenNew = await prisma.$transaction(async (tx) => {
-		await tx.refreshToken.update({
-			where: { id: row.id },
+		await tx.refreshToken.updateMany({
+			where: { familyId: row.familyId, revokedAt: null },
 			data: { revokedAt: new Date() },
 		});
 

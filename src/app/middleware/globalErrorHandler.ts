@@ -9,6 +9,16 @@ import AppError from "../utils/appError";
 const { JsonWebTokenError } = jwt;
 
 /**
+ * `instanceof` alone is not enough: in the bundled build jsonwebtoken can be
+ * instantiated twice, so a real JsonWebTokenError/TokenExpiredError may fail the
+ * check. Match the stable `name` as well.
+ */
+const isJwtError = (err: unknown): err is Error =>
+	err instanceof JsonWebTokenError ||
+	(err instanceof Error &&
+		(err.name === "JsonWebTokenError" || err.name === "TokenExpiredError"));
+
+/**
  * D10 — only the two Prisma request-error branches changed from Task Orbit:
  * `P2002 → 409`, `P2025 → 404` (design §7.2). Everything else is identical.
  */
@@ -71,11 +81,12 @@ const errorHandler = async (
 			return `${fieldPath}: ${issue.message}`;
 		});
 		message = formattedIssues.join("; ");
-	} else if (err instanceof JsonWebTokenError) {
+	} else if (isJwtError(err)) {
 		errorName = err.name;
-		message = "Invalid Token";
+		// Same contract as auth(): 401 tells the browser to refresh the session.
+		message = "Invalid or expired token";
 		errorStack = err.stack;
-		statusCode = status.BAD_REQUEST;
+		statusCode = status.UNAUTHORIZED;
 	} else if (err instanceof AppError) {
 		errorName = err.name;
 		message = err.message;

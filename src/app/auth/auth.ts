@@ -63,7 +63,14 @@ const auth = (...roles: Role[]) => {
 		});
 
 		if (!decoded.success || !decoded.data) {
-			throw new AppError(status.BAD_REQUEST, `${decoded.message}`);
+			// 401, not 400: an expired or invalid access token is an
+			// authentication failure. The browser renews the session on 401
+			// only, so answering 400 here silently signs the user out once the
+			// 15-minute access token expires.
+			throw new AppError(
+				status.UNAUTHORIZED,
+				decoded.message || "Invalid or expired token",
+			);
 		}
 
 		const claims = decoded.data;

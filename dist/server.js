@@ -864,6 +864,7 @@ var appError_default = AppError;
 
 // src/app/middleware/globalErrorHandler.ts
 var { JsonWebTokenError } = jwt;
+var isJwtError = (err) => err instanceof JsonWebTokenError || err instanceof Error && (err.name === "JsonWebTokenError" || err.name === "TokenExpiredError");
 var errorHandler = async (err, _, res, __) => {
   let statusCode = status.INTERNAL_SERVER_ERROR;
   let message = "";
@@ -914,11 +915,11 @@ var errorHandler = async (err, _, res, __) => {
       return `${fieldPath}: ${issue.message}`;
     });
     message = formattedIssues.join("; ");
-  } else if (err instanceof JsonWebTokenError) {
+  } else if (isJwtError(err)) {
     errorName = err.name;
-    message = "Invalid Token";
+    message = "Invalid or expired token";
     errorStack = err.stack;
-    statusCode = status.BAD_REQUEST;
+    statusCode = status.UNAUTHORIZED;
   } else if (err instanceof appError_default) {
     errorName = err.name;
     message = err.message;
@@ -1098,7 +1099,10 @@ var auth = (...roles) => {
       audience: config_default.jwt_audience
     });
     if (!decoded.success || !decoded.data) {
-      throw new appError_default(status3.BAD_REQUEST, `${decoded.message}`);
+      throw new appError_default(
+        status3.UNAUTHORIZED,
+        decoded.message || "Invalid or expired token"
+      );
     }
     const claims = decoded.data;
     if (await isDenied(claims.sub)) {
